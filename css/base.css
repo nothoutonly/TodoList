@@ -1,0 +1,126 @@
+/*
+ * @Author: nothoutonly 
+ * @Date: 2017-11-20 15:25:31 
+ * @Last Modified by: nothoutonly
+ * @Last Modified time: 2017-11-24 22:30:52
+ */
+
+*{
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+    -webkit-transition: background .2s;
+    transition: background .2s;
+    outline: 0;
+}
+body{
+    background-color: #00334b;
+    color: #fff;
+}
+/* ============================================  */
+.container{
+    max-width: 900px;
+    margin: 60px auto;
+    position: relative;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+.add-task input[type=text]{
+    width: 84%;
+    float: left;
+    margin-right: 1%;
+}
+.add-task button[type=submit]{
+    width: 15%;
+    background: #1c98d2;
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+    box-shadow: 0 2px 3px rgba(0,0,0,.4);  
+}
+.add-task button[type=submit]:hover{
+    background: #55a7ce;
+}
+
+input, .task-items, button{
+    border-radius: 3px;
+    padding: 10px;
+    border: 0;
+}
+button{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.task-list{
+    margin: 5px 0;
+}
+.task-items{
+    padding: 10px;
+    background: #fff;
+    color: #333;
+    margin-bottom: 2px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+            box-shadow: 0 2px 3px rgba(0,0,0,.4);
+
+}
+.task-items:hover{
+    background: #ddd;
+}
+.task-items > span:nth-child(3), 
+.task-items > span:nth-child(4){
+    float: right;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.task-items > span:nth-child(3):hover, 
+.task-items > span:nth-child(4):hover{
+    color: #444;
+}
+
+.task-content{
+    margin-left: 5px;
+}
+
+.task-detail-mask{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(100,100,100,.6);
+    display: none;
+}
+.task-detail{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background: #fff;
+    color: #333;
+    padding: 10px;
+    border-radius: 3px;
+    width: 50%;
+    display: none;
+}
+.task-detail .content{
+    padding: 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.tesk-detail > * {
+    margin-bottom: 10px;
+}
+textarea{
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+    min-height: 100px;
+}
+.task-detail input[type=date]{
+    width: 100%;
+}
