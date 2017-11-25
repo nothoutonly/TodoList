@@ -1,16 +1,15 @@
 ;(function(){
     'use strict';
     
-    var $form_add_task = $(".add-task")
-    ,   task_list = {}
-    ; 
+    var $form_add_task = $(".add-task");
+    var task_list = {};
     // 初始化  
     init();
 
     // 添加任务
     $form_add_task.on("submit", function(e){
         var new_task = {};
-        var $input = $(this).find("input[name=content]")
+        var $input = $(this).find("input[name=content]");
         e.preventDefault();
         new_task.content = $input.val();
         if( !new_task.content ) return;
@@ -18,7 +17,7 @@
             render_task_list();
             $input.val(null);
         }  
-    })
+    });
     
     function add_task(new_task){        
         task_list.push(new_task);       
@@ -43,7 +42,7 @@
                                 '<span class="task-content">' +data.content+ '</span>' +
                                 '<span>delete</span>' +
                                 '<span>detail</span>' +
-                            '</div>'
+                            '</div>';
         return $(list_item_tpl);
     }
 
