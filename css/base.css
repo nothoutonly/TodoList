@@ -2,13 +2,14 @@
  * @Author: nothoutonly 
  * @Date: 2017-11-20 15:25:31 
  * @Last Modified by: nothoutonly
- * @Last Modified time: 2017-11-24 22:30:52
+ * @Last Modified time: 2017-12-09 15:41:13
  */
 
 *{
     padding: 0; 
     margin: 0; 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+            box-sizing: border-box;
     -webkit-transition: background .2s;
     transition: background .2s;
     outline: 0;
@@ -34,13 +35,13 @@ h1{
     float: left;
     margin-right: 1%;
 }
-.add-task button[type=submit]{
+button[type=submit]{
     width: 15%;
     background: #1c98d2;
     -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
     box-shadow: 0 2px 3px rgba(0,0,0,.4);  
 }
-.add-task button[type=submit]:hover{
+button[type=submit]:hover{
     background: #55a7ce;
 }
 
@@ -70,16 +71,14 @@ button{
 .task-items:hover{
     background: #ddd;
 }
-.task-items > span:nth-child(3), 
-.task-items > span:nth-child(4){
+.action{
     float: right;
-    margin-right: 16px;
-    font-size: 18px;
+    font-size: 90%;
+    margin-right: 5px;
 }
 
-.task-items > span:nth-child(3):hover, 
-.task-items > span:nth-child(4):hover{
-    color: #444;
+.action:hover{
+    color: rgb(105, 105, 105);
 }
 
 .task-content{
@@ -87,7 +86,7 @@ button{
 }
 
 .task-detail-mask{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -96,9 +95,9 @@ button{
     display: none;
 }
 .task-detail{
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 30%;
     padding: 10px;
     background: #fff;
     color: #333;
@@ -106,14 +105,21 @@ button{
     border-radius: 3px;
     width: 50%;
     display: none;
+    -webkit-box-shadow: 0 1px 2px 2px rgba(0,0,0,.2);
+            box-shadow: 0 1px 2px 2px rgba(0,0,0,.2);
 }
 .task-detail .content{
     padding: 10px;
     font-weight: 900;
     cursor: pointer;
 }
-.tesk-detail > * {
+.task-detail .input_item {
     margin-bottom: 10px;
+}
+.update_button{
+    float: right;
+    margin-top: 5px;
+    width: 90px !important;
 }
 textarea{
     border-radius: 3px;
@@ -121,6 +127,8 @@ textarea{
     width: 100%;
     min-height: 100px;
 }
-.task-detail input[type=date]{
+.task-detail input[type=date],
+.task-detail input[type=text]{
     width: 100%;
+    border: 1px solid #999;
 }
